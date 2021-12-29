@@ -40,7 +40,9 @@
   }
   
   const CalculateVATReverse = (ProductPriceVAT,VATPercetage2) =>{
-    return ProductPriceVAT / (VATPercetage2 / 100 + 1);
+    let baseprice = ProductPriceVAT / (VATPercetage2 / 100 + 1);
+    let VAT = ProductPriceVAT - baseprice;
+    return [baseprice, VAT];
   }
-  console.log(ProductVATReverse(2.18,5));
+  console.log(ProductVATReverse(2.18,9));
   console.log(ProductVAT(2,9));
